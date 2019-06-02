@@ -1,0 +1,508 @@
+---
+---
+//planetary funk alert  ltj bukem
+
+$gold: #dbb484;
+$darkgold: #734c1c;
+$mustardGold: #d3b14e;
+
+
+html{
+	background-color:black;
+}
+
+body{
+	background-color:white;
+}
+
+figure{
+	font-style: italic;
+	color:$darkgold;
+	padding-top: .5em;
+	padding-left: .2em;
+
+	a {
+		  &:link,
+		  &:visited
+		 {
+		  	color: $mustardGold;
+		  	text-decoration: none;
+		  }
+		}//end a
+
+	a {
+		 
+		  &:hover,
+		  &:active {
+		  	color: $mustardGold;
+		  	text-decoration: underline;
+		  }
+		}//end a	
+}
+
+article, p{
+	font-family: Georgia, serif;
+	color: #333;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: $mustardGold; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+//--------------------------
+.callout{
+		border-top:0px solid $darkgold;
+		background-color: $gold;
+		padding:2em 0em;
+
+		text-align: center;
+
+		p{
+			margin: 0 2em .5em 2em;
+		    color: #734c1c;
+		    font-size: 1em;
+		    text-align: center;
+		}
+
+	}
+
+@media only screen and (min-width: 770px) {
+
+	.callout{
+		border-top:0px solid $darkgold;
+		 // background-color: red;
+		padding:2em;
+		text-align: center;
+
+		p{
+			margin: 0 4em .5em 4em;
+		    color: #734c1c;
+		    font-size: 1.4em;
+		    text-align: center;
+		}
+
+	}
+}
+//--------------------------
+
+
+
+.archDig{
+	background-color: $mustardGold;
+	padding:1em;
+}
+
+
+
+.container{
+
+	background-color: white;
+	padding-top:2em;
+	padding-bottom:4em;
+	justify-content: center;
+
+
+
+	article{
+		// display:flex;
+		// border:3px solid purple;
+		// flex-direction: row-reverse;
+	
+		.column{
+				padding:1em .5em;
+
+				h2{
+					color: $darkgold;
+					font-weight: bold;
+				}
+
+				h2:not(:first-child) { 
+					padding-top:.5em;
+				}
+
+				// border: 1px dotted orange;
+				
+		}//end column
+
+		
+
+	}//end article
+
+}//end container
+
+
+@media only screen and (min-width: 500px) {
+
+.container{
+	article{
+		// display:flex;
+		// border:3px solid purple;
+		// flex-direction: row-reverse;
+	
+		.column{
+				padding:1em 2em;
+				}
+	}//end article
+}//end container
+
+}//end media query 500
+
+
+
+@media only screen and (min-width: 970px) {
+  
+	article{
+		display:flex;
+
+		.column-01{
+			
+			margin-right:0;
+			// border:1px solid red;
+			flex-grow: 1;
+			flex-basis: 50%;
+		 }
+
+		.column-02{
+			margin-left:0;
+			// border:1px solid orange;
+			flex-grow: 1;
+			flex-basis: 50%;
+		}
+
+	} //end article
+
+} //end media query
+
+
+
+.header-strip{
+	background-color: black;
+	padding:1em;
+	text-align: center;
+	border-bottom: 4px solid $darkgold;
+
+
+	h1{
+
+		font-family: 'Norican', cursive;
+
+		a {
+		  &:link,
+		  &:visited,
+		  &:hover,
+		  &:active {
+		  	color: $gold;
+		  	text-decoration: none;
+		  }
+		}//end a
+
+	}//end h1
+
+	.sub{
+		letter-spacing: .65em;
+    	color: #b5b5b5;
+    	font-size: .75em;
+	}
+
+}//end header strip
+
+
+h1, h2 {
+	// font-family: 'Norican', cursive;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	color: black;
+}
+
+.arch-dig{
+	display: block;
+	color: white;
+
+	h2{
+		color:white;
+		font-size: 3em;
+		font-weight: bold;
+		line-height: 1em;
+	}
+
+	h3.attrib{
+		font-size:1.25em;
+		font-style: italic;
+		padding-bottom:.65em;
+		border:0px dotted red;
+	}
+}
+
+.carousel-holder{
+	width:100%;
+	text-align: center;
+	// border:2px solid green;
+	display: block;
+
+}
+
+// .carousel-item{
+// 	backface-visibility: visible !important;
+// 	display:block !important;
+// }
+
+.bd-example, 
+.carousel-inner{
+	max-width:700px;
+}
+
+.bd-example{
+	// border:2px solid red;
+	overflow: visible;
+	text-align: center;
+}
+
+
+
+.carousel-inner{
+	overflow: visible;
+}
+
+
+#colophon{
+	padding:2em;
+	background-color:black;
+	min-height: 200px;
+	text-align: center;
+
+
+
+	.site-id{
+		font-family: 'Norican', cursive;
+		text-align: center;
+		a {
+		  &:link,
+		  &:visited,
+		  &:hover,
+		  &:active {
+		  	color: $gold;
+		  	text-decoration: none;
+		  }
+		}
+	}/*end .site-id*/
+
+	a.reserve {
+		  &:link,
+		  &:visited,
+		  &:hover,
+		  &:active {
+		  	// border:1px solid red;
+		  	color: #ffffff !important;
+		  	font-family: Georgia, serif;
+		  	// text-decoration: none;
+		  }
+
+		}  
+
+		
+}//end colophon
+
+
+
+.carousel-holder{
+	position: relative;
+}
+
+.slideshow-callout{
+	position: absolute;
+	display: none;
+    top: 6%;
+    z-index: 100;
+     border: 0px solid #fb0202; 
+     background-color: rgba(104,86,32, .3);
+    margin: 0 auto;
+    left: 10%;
+    color: white;
+    
+    width: 70%;
+    text-align: left;
+    
+    letter-spacing: -.05rem;
+    padding:1em;
+    
+
+    h2{
+    	font-size: 5em;
+    	font-weight: bold;
+    	line-height: 1em;
+    	color:white;
+    	text-shadow: 2px 2px 2px rgba(40,17,11,0.44);
+    }
+
+    h3.attrib{
+    	font-style: italic;
+    	letter-spacing: 0rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+.arch-dig{
+	display: none;
+}
+
+.slideshow-callout{
+	display: block;
+	top: 20%;
+	left: 20%;
+	width: 70%;
+	text-align: left;
+	 letter-spacing: -.05rem;
+    padding:1em;
+
+    h2{
+    	font-size: 3em;
+    	font-weight: bold;
+    	line-height: 1em;
+    	color:white;
+    	text-shadow: 2px 2px 2px rgba(40,17,11,0.44);
+    }
+
+    h3.attrib{
+    	font-style: italic;
+    	letter-spacing: 0rem;
+    }
+}
+
+}//end media query 1100px
+
+
+
+@media only screen and (min-width: 800px) {
+
+.slideshow-callout{
+	display: block;
+	top: 6%;
+	left: 10%;
+	width: 70%;
+	text-align: left;
+	 letter-spacing: -.05rem;
+    padding:1em;
+
+    h2{
+    	font-size: 5em;
+    	font-weight: bold;
+    	line-height: 1em;
+    	color:white;
+    	text-shadow: 2px 2px 2px rgba(40,17,11,0.44);
+    }
+
+    h3.attrib{
+    	font-style: italic;
+    	letter-spacing: 0rem;
+    }
+}
+
+}//end media query 1100px
+
+
+@media only screen and (min-width: 1100px) {
+
+.slideshow-callout{
+	display: block;
+	top: 6%;
+	left: 10%;
+	width: 60%;
+	text-align: left;
+	 letter-spacing: -.05rem;
+    padding:.5em;
+
+    h2{
+    	font-size: 6em;
+    	font-weight: bold;
+    	line-height: 1em;
+    	color:white;
+    	text-shadow: 2px 2px 2px rgba(40,17,11,0.44);
+    }
+
+    h3.attrib{
+    	font-style: italic;
+    	letter-spacing: 0rem;
+    }
+}
+
+}//end media query 1100px
+
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+#mapid { height: 400px; }
+
+button.reserve{
+	color:white !important;
+	background-color: black !important;
+	border:none !important;
+	padding:.5em 1.6em !important;
+	text-transform: uppercase;
+	margin-top:.5em;
+	// border:1px solid $gold !important;
+}
+
+
+
+button.reserve {
+		  &:link,
+		  &:visited{
+		  	background-color: black !important;
+		  	color: white;
+		  	text-decoration: none;
+		  	border:none !important;
+
+		  }
+}
+
+
+button.reserve {
+		  &:hover {
+		  	background-color: $darkgold !important;
+		  	color:white;
+		  	text-decoration: none;
+		  	// border:1px solid white !important;
+		  	border:none !important;
+		  }
+}		  
+
+button.reserve{
+		&:active{
+			background-color: darken( $darkgold, 20% ) !important;
+			border:none !important;
+
+		}
+}
+
+
+
+

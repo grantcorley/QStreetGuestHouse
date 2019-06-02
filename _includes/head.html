@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <meta http-equiv="refresh" content="1" /> -->
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  {% assign user_url = site.url | append: site.baseurl %}
+  {% assign full_base_url = user_url | default: site.github.url %}
+  
+  <!-- <link rel="stylesheet" href="{{ '/assets/style.css' | prepend: full_base_url }}"> -->
+  
+  <!--import bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="flickity-docs/flickity.css" media="screen">
+
+  <!--import font(s)-->
+  <link href="https://fonts.googleapis.com/css?family=Norican&display=swap" rel="stylesheet">
+
+  <!--import Leaflet-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+  <!-- Grant's style sheet -->
+  <link rel="stylesheet" href="{{ '/assets/custom.css' | prepend: full_base_url }}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>

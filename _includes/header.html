@@ -1,0 +1,14 @@
+<header class="header-background">
+
+      <div class="header-strip">
+        <h1><a href="{{site.url}}">{{ site.title }}</a></h1>
+        <p class="sub">IN THE HEART OF GEORGETOWN</p>
+      </div> 
+
+        <!-- only display marquee carousel if this is the home page -->
+      {% if page.layout == "home"%}
+	     {% include carousel.html %}
+     {% endif %}
+
+        
+      </header>
